@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the Page2Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,6 +9,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 })
 export class Page2Page {
   date: string = ""
+  today: any = new Date().toDateString();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertController: AlertController) {
   }
@@ -26,7 +21,7 @@ export class Page2Page {
 
   next() {
     const alert = this.alertController.create({
-      message: 'Are you sure about the Date? This will not be changed again.',
+      message: 'Are you sure about the Date? It cannot be changed again.',
       mode: 'ios',
       buttons: [
 

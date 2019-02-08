@@ -1,5 +1,81 @@
-
-
 <ion-content padding>
+  <ion-grid *ngIf="!isNext" >
+    <ion-row>
+      <img src="../../assets/images/13.jpg" class="image" />
+    </ion-row>
 
+    <div margin-top>
+      <h3 text-center>Would you still love me again?</h3>
+    </div>
+
+    <ion-row text-center>
+
+      <div col-6>
+        <button
+          ion-button
+          round
+          type="button"
+          color="danger"
+          class="no-shadow capitalize btn-medium"
+          [disabled]="date == ''"
+          (tap)="no()"
+        >
+          No
+        </button>
+      </div>
+      <div col-6>
+          <button
+            ion-button
+            round
+            type="button"
+            color="danger"
+            class="no-shadow capitalize btn-medium"
+            [disabled]="date == ''"
+            (tap)="next()"
+          >
+            Yes
+          </button>
+        </div>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="isNext" >
+      <ion-row>
+        <img src="../../assets/images/17.jpg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h3 text-center>Will you love for who I am?</h3>
+      </div>
+
+      <ion-row text-center>
+
+        <div col-6>
+          <button
+            ion-button
+            round
+            type="button"
+            color="danger"
+            class="no-shadow capitalize btn-medium"
+            [disabled]="date == ''"
+            (tap)="no()"
+          >
+            No
+          </button>
+        </div>
+        <div col-6>
+            <button
+              ion-button
+              round
+              type="button"
+              color="danger"
+              class="no-shadow capitalize btn-medium"
+              [disabled]="date == ''"
+              (tap)="next2()"
+            >
+              Yes
+            </button>
+          </div>
+      </ion-row>
+    </ion-grid>
 </ion-content>

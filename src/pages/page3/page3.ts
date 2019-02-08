@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from "@angular/core";
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  AlertController
+} from "ionic-angular";
 
 /**
  * Generated class for the Page3Page page.
@@ -10,19 +15,47 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-page3',
-  templateUrl: 'page3.html',
+  selector: "page-page3",
+  templateUrl: "page3.html"
 })
 export class Page3Page {
-  date: string
+  date: string;
+  isNext: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public alertController: AlertController
+  ) {}
 
   ionViewDidLoad() {
-    this.date = this.navParams.get('date')
+    this.date = this.navParams.get("date");
     console.log(this.date);
-
   }
 
+  no() {
+    const alert = this.alertController.create({
+      message: "An error has occured. Unacceptable answer.",
+      mode: "ios",
+      buttons: [
+        { text: "Okay" }
+        // {
+        //   text: "Yes",
+        //   handler: () => {
+        //     this.navCtrl.setRoot('Page3Page', { date: this.date })
+        //     console.log(this.date);
+        //   }
+        // }
+      ]
+    });
+    alert.present();
+  }
+
+  next() {
+    this.isNext = true;
+  }
+
+  next2() {
+    this.navCtrl.setRoot("Page4Page");
+  }
 }
