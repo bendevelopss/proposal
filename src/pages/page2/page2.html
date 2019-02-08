@@ -1,0 +1,22 @@
+<ion-content padding>
+  <ion-grid>
+    <div>
+      <h1 text-center>PLEASE PICK A DATE</h1>
+      <h4 text-center>Please Choose only in the Month of February</h4>
+
+    </div>
+
+    <ion-item>
+      <ion-datetime display-format="MMMM YYYY" min="2019" max="2019-02" [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+
+    <ion-row margin-top>
+      <div col-12>
+        <button ion-button round type="button" color="danger" class="no-shadow capitalize btn-medium" [disabled]="date == ''" (tap)="next()">
+          NEXT
+        </button>
+      </div>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,45 @@
+page-home {
+  ion-content.content{
+    // position: relative;
+
+        content: '';
+        background: url('http://pictures.4ever.eu/data/download/love/couples/couple,-sunset-over-the-sea,-open-sea,-wooden-stairs-256367.jpg?no-logo') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+
+}
+
+    $text-input-md-show-focus-highlight: true !important;
+    $label-ios-text-color-focused: false;
+    $label-md-text-color-focused: false;
+
+    // .scroll-content{
+    //   padding-top: 7vh !important;
+    // }
+
+    .button {
+        // min-height: 6vh;
+        // max-height: 6vh;
+        // min-width: 100%;
+        width: 100%;
+    }
+
+    .image {
+      width: 80%;
+      left: 0;
+      text-align: center;
+      height: 80%;
+      margin: auto;
+      border: 3px solid green;
+    }
+
+    .row2{
+      margin-top: 25vh;
+    }
+
+}
