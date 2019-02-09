@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from "@angular/core";
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  AlertController
+} from "ionic-angular";
 
 /**
  * Generated class for the Page5Page page.
@@ -10,16 +15,38 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-page5',
-  templateUrl: 'page5.html',
+  selector: "page-page5",
+  templateUrl: "page5.html"
 })
 export class Page5Page {
+  count: number = 1;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public alertCtrl: AlertController
+  ) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Page5Page');
+    this.count = 1;
+    console.log("ionViewDidLoad Page5Page");
   }
 
+  next() {
+    const alert = this.alertCtrl.create({
+      message: "Are you sure you want to go to the next page?",
+      mode: "ios",
+      buttons: [
+        { text: "No" },
+        {
+          text: "Yes",
+          handler: () => {
+            this.navCtrl.setRoot("Page4Page");
+          }
+        }
+      ]
+    });
+    alert.present();
+    // if(this.count == 7)
+  }
 }

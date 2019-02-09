@@ -55,7 +55,7 @@ export class Page3Page {
 
   next() {
     this.count++;
-    if(this.count == 14) this.navCtrl.setRoot('Page4Page')
+    if(this.count == 14) this.navCtrl.setRoot('Page5Page')
   }
 
   // next2() {

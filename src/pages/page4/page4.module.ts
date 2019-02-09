@@ -4,8 +4,7 @@ import { Page4Page } from './page4';
 
 @NgModule({
   declarations: [
-    Page4Page,
-  ],
+    Page4Page, ],
   imports: [
     IonicPageModule.forChild(Page4Page),
   ],

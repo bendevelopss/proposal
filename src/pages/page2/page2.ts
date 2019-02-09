@@ -8,7 +8,6 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
   templateUrl: 'page2.html',
 })
 export class Page2Page {
-  date: string = ""
   today: any = new Date().toISOString();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertController: AlertController) {
@@ -18,10 +17,9 @@ export class Page2Page {
     console.log('ionViewDidLoad Page2Page');
   }
 
-
-  next() {
+  startAlert(){
     const alert = this.alertController.create({
-      message: 'Are you sure about the Date? It cannot be changed again.',
+      message: 'Are you sure about the date? It cannot be changed again.',
       mode: 'ios',
       buttons: [
 
@@ -29,9 +27,31 @@ export class Page2Page {
         {
           text: "Yes",
           handler: () => {
-            this.navCtrl.setRoot('Page3Page')
-            localStorage.setItem('date', this.date)
+            this.next();
+          }
+        }
+      ]
+    })
+    alert.present()
+  }
+
+
+  next() {
+    const alert = this.alertController.create({
+      message: 'Are you really really sure about this?',
+      mode: 'ios',
+      buttons: [
+
+        { text: "No" },
+        {
+          text: "Yes",
+          handler: () => {
+            localStorage.setItem('date', this.today)
+            console.log(0,this.today);
+
             console.log(localStorage.getItem('date'));
+            this.navCtrl.setRoot('Page3Page')
+
           }
         }
       ]

@@ -1,39 +1,91 @@
 <ion-content padding>
-    <ion-grid>
+  <ion-grid *ngIf="count != 7" >
+    <div *ngIf="count == 1">
       <ion-row>
         <img src="../../assets/images/32.jpg" class="image" />
       </ion-row>
 
       <div margin-top>
-        <h3 text-center>PWEDE BANG TAYO NALANG ULIT?</h3>
+        <h3 text-center>Pwede bang tayo nalang ulit?</h3>
       </div>
+    </div>
 
-      <ion-row text-center>
-
-        <div col-6>
-          <button
-            ion-button
-            round
-            type="button"
-            color="danger"
-            class="no-shadow capitalize btn-medium"
-            (tap)="no()"
-          >
-            No
-          </button>
-        </div>
-        <div col-6>
-            <button
-              ion-button
-              round
-              type="button"
-              color="danger"
-              class="no-shadow capitalize btn-medium"
-              (tap)="next()"
-            >
-              Yes
-            </button>
-          </div>
+    <div *ngIf="count == 2">
+      <ion-row>
+        <img src="../../assets/images/32.jpg" class="image" />
       </ion-row>
-    </ion-grid>
-  </ion-content>
+
+      <div margin-top>
+        <h3 text-center>Pwede bang akin ka nalang ulit?</h3>
+      </div>
+    </div>
+
+    <div *ngIf="count == 3">
+      <ion-row>
+        <img src="../../assets/images/32.jpg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h3 text-center>Pwede mo ba akong mahalin ulit?</h3>
+      </div>
+    </div>
+
+    <div *ngIf="count == 4">
+      <ion-row>
+        <img src="../../assets/images/32.jpg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h3 text-center>Mapapatawad mo ba ako sa lahat ng sakit na nagawa ko sayo?</h3>
+      </div>
+    </div>
+
+    <div *ngIf="count == 5">
+      <ion-row>
+        <img src="../../assets/images/32.jpg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h3 text-center>Pwede bang ikaw nalang makakasama kong tumanda?</h3>
+      </div>
+    </div>
+
+    <div *ngIf="count == 6">
+      <ion-row>
+        <img src="../../assets/images/32.jpg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h3 text-center>Kaya mo pa ba akong bigyan ng isa pang pagkakataon para itama ang lahat?</h3>
+      </div>
+    </div>
+
+
+    <ion-row text-center>
+      <div col-6>
+        <button
+          ion-button
+          round
+          type="button"
+          color="danger"
+          class="no-shadow capitalize btn-medium"
+          (tap)="no()"
+        >
+          No
+        </button>
+      </div>
+      <div col-6>
+        <button
+          ion-button
+          round
+          type="button"
+          color="danger"
+          class="no-shadow capitalize btn-medium"
+          (tap)="next()"
+        >
+          Yes
+        </button>
+      </div>
+    </ion-row>
+  </ion-grid>
+</ion-content>
