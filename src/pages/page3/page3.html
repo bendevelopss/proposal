@@ -1,15 +1,178 @@
 <ion-content padding>
-  <ion-grid *ngIf="!isNext" >
-    <ion-row>
-      <img src="../../assets/images/13.jpg" class="image" />
-    </ion-row>
+  <ion-grid>
+    <div *ngIf="count == 1">
+      <ion-row>
+        <img src="../../assets/images/13.jpg" class="image" />
+      </ion-row>
 
-    <div margin-top>
-      <h3 text-center>Would you still love me again?</h3>
+      <div margin-top>
+        <h5 text-center>Mahal kita kasi pinahalagahan mo ako</h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 2">
+      <ion-row>
+        <img
+          src="../../assets/images//16.jpeg"
+          class="image"
+          style="height: 80vh;"
+        />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>Mahal kita kasi kahit nasaktan kita nanjan ka parin</h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 3">
+      <ion-row>
+        <img src="../../assets/images/22.jpg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>
+          Mahal kita kasi ikaw yung laging nanjan para sa akin
+        </h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 4">
+      <ion-row>
+        <img src="../../assets/images/27.jpeg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>
+          Mahal kita kasi kahit ilang buwan ng nakakalipas hindi mo parin ako
+          kinakalimutan
+        </h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 5">
+      <ion-row>
+        <img
+          src="../../assets/images/33.jpeg"
+          class="image"
+          style="height: 80vh;"
+        />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>Mahal kita kasi ayaw na kitang mawala ulit</h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 6">
+      <ion-row>
+        <img src="../../assets/images/29.jpeg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>
+          Mahal kita kasi ikaw lang nagparamdam sakin ng tunay pagmamahal at
+          halaga
+        </h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 7">
+      <ion-row>
+        <img src="../../assets/images/37.jpeg" class="image" />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>Mahal kita kasi sobrang dami na nating pinagdaanan</h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 8">
+      <ion-row>
+        <img
+          src="../../assets/images/47.jpg"
+          class="image"
+          style="height: 75vh"
+        />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>
+          Mahal kita kasi ikaw lang ang nakakapagpasaya sa akin
+        </h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 9">
+      <ion-row>
+        <img
+          src="../../assets/images/5.jpg"
+          class="image"
+          style="height: 75vh"
+        />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>Mahal kita kasi ginagawa mo ang lahat para sakin</h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 10">
+      <ion-row>
+        <img
+          src="../../assets/images/3.jpg"
+          class="image"
+          style="height: 75vh"
+        />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>Mahal kita kasi hindi ka mahirap mahalin</h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 11">
+      <ion-row>
+        <img
+          src="../../assets/images/4.jpg"
+          class="image"
+          style="height: 75vh"
+        />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>MAHAL KITA KASI MAHAL KITA</h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 12">
+      <ion-row>
+        <img
+          src="../../assets/images/45.jpeg"
+          class="image"
+          style="height: 75vh"
+        />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>AT HIGIT SA LAHAT MADAMING RASON KUNG BAKIT KITA MAHAL</h5>
+      </div>
+    </div>
+
+    <div *ngIf="count == 13">
+      <ion-row>
+        <img
+          src="../../assets/images/46.jpeg"
+          class="image"
+          style="height: 75vh"
+        />
+      </ion-row>
+
+      <div margin-top>
+        <h5 text-center>I LOVE YOU BABY!</h5>
+      </div>
     </div>
 
     <ion-row text-center>
-
       <div col-6>
         <button
           ion-button
@@ -17,65 +180,23 @@
           type="button"
           color="danger"
           class="no-shadow capitalize btn-medium"
-          [disabled]="date == ''"
           (tap)="no()"
         >
-          No
+          HINDI KITA MAHAL
         </button>
       </div>
       <div col-6>
-          <button
-            ion-button
-            round
-            type="button"
-            color="danger"
-            class="no-shadow capitalize btn-medium"
-            [disabled]="date == ''"
-            (tap)="next()"
-          >
-            Yes
-          </button>
-        </div>
+        <button
+          ion-button
+          round
+          type="button"
+          color="danger"
+          class="no-shadow capitalize btn-medium"
+          (tap)="next()"
+        >
+          NEXT
+        </button>
+      </div>
     </ion-row>
   </ion-grid>
-
-  <ion-grid *ngIf="isNext" >
-      <ion-row>
-        <img src="../../assets/images/17.jpg" class="image" />
-      </ion-row>
-
-      <div margin-top>
-        <h3 text-center>Will you love for who I am?</h3>
-      </div>
-
-      <ion-row text-center>
-
-        <div col-6>
-          <button
-            ion-button
-            round
-            type="button"
-            color="danger"
-            class="no-shadow capitalize btn-medium"
-            [disabled]="date == ''"
-            (tap)="no()"
-          >
-            No
-          </button>
-        </div>
-        <div col-6>
-            <button
-              ion-button
-              round
-              type="button"
-              color="danger"
-              class="no-shadow capitalize btn-medium"
-              [disabled]="date == ''"
-              (tap)="next2()"
-            >
-              Yes
-            </button>
-          </div>
-      </ion-row>
-    </ion-grid>
 </ion-content>

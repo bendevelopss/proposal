@@ -8,12 +8,12 @@
     </div>
 
     <ion-item>
-      <ion-datetime display-format="MMMM-YYYY" min="2019-02-12" max="2019-02" [(ngModel)]="date"></ion-datetime>
+      <ion-datetime displayFormat="MMMM DD, YYYY - DDDD" min="2019-02-12" max="2019-02" [(ngModel)]="today"></ion-datetime>
     </ion-item>
 
     <ion-row margin-top>
       <div col-12>
-        <button ion-button round type="button" color="danger" class="no-shadow capitalize btn-medium" [disabled]="date == ''" (tap)="next()">
+        <button ion-button round type="button" color="danger" class="no-shadow capitalize btn-medium" (tap)="next()">
           NEXT
         </button>
       </div>
@@ -21,3 +21,4 @@
 
   </ion-grid>
 </ion-content>
+

@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 })
 export class Page2Page {
   date: string = ""
-  today: any = new Date().toDateString();
+  today: any = new Date().toISOString();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertController: AlertController) {
   }
@@ -29,8 +29,9 @@ export class Page2Page {
         {
           text: "Yes",
           handler: () => {
-            this.navCtrl.setRoot('Page3Page', { date: this.date })
-            console.log(this.date);
+            this.navCtrl.setRoot('Page3Page')
+            localStorage.setItem('date', this.date)
+            console.log(localStorage.getItem('date'));
           }
         }
       ]

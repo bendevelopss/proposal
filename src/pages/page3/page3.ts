@@ -21,6 +21,7 @@ import {
 export class Page3Page {
   date: string;
   isNext: boolean = false;
+  count: number = 1
 
   constructor(
     public navCtrl: NavController,
@@ -29,6 +30,7 @@ export class Page3Page {
   ) {}
 
   ionViewDidLoad() {
+    this.count = 1;
     this.date = this.navParams.get("date");
     console.log(this.date);
   }
@@ -52,10 +54,11 @@ export class Page3Page {
   }
 
   next() {
-    this.isNext = true;
+    this.count++;
+    if(this.count == 14) this.navCtrl.setRoot('Page4Page')
   }
 
-  next2() {
-    this.navCtrl.setRoot("Page4Page");
-  }
+  // next2() {
+  //   this.navCtrl.setRoot("Page4Page");
+  // }
 }
