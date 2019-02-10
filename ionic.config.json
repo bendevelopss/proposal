@@ -1,5 +1,7 @@
 {
   "name": "proposal",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

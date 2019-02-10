@@ -2,18 +2,35 @@
   <div class="login-wrapper">
     <!-- Header -->
 
-
+    <ion-slides zoom="true" pager slidesPerView="2.3" effect="slide" autoplay="1400" loop>
+      <ion-slide *ngFor="let image of images">
+        <div class="swiper-zoom-container">
+          <img [src]="image" class="image2" />
+        </div>
+      </ion-slide>
+    </ion-slides>
   </div>
 
+  <ion-row class="row2" text-center>
+    <div text-center style="margin-left: auto; margin-right: auto;">
+        <h3 for="" margin-left text-center text-justify style="font-family: 'Courier New', Courier, monospace; text-decoration: underline">JAJA'S PROPOSAL</h3>
 
-  <ion-row float-right margin-top>
-      <button ion-button round type="button" color="danger" class="no-shadow capitalize btn-medium" (tap)="next()">
-        BEGIN PROPOSAL
-      </button>
+    </div>
+    <!-- <h3 for="" margin-left text-center text-justify style="font-family: 'Courier New', Courier, monospace; text-decoration: underline">PROPOSAL</h3> -->
+
+    <img src="assets/images/51.JPG" class="image" />
   </ion-row>
 
-  <ion-row class="row2">
-    <img src="../../assets/images/51.JPG" class="image">
+  <ion-row text-center padding>
+    <button
+      ion-button
+      round
+      type="button"
+      color="danger"
+      class="no-shadow capitalize btn-medium"
+      (tap)="next()"
+    >
+      START PROPOSAL
+    </button>
   </ion-row>
-
 </ion-content>
