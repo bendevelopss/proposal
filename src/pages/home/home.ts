@@ -29,10 +29,15 @@ export class HomePage {
     '/assets/images/30.jpg',
     '/assets/images/32.jpg',
     '/assets/images/33.jpeg',
+    '/assets/images/62.jpg',
     '/assets/images/39.jpg',
     '/assets/images/41.jpg',
     '/assets/images/44.jpeg',
+    '/assets/images/54.jpg',
+    '/assets/images/55.jpg',
+    '/assets/images/57.jpg',
     '/assets/images/47.jpg',
+
     // '/assets/images/48.JPG',
   ]
 

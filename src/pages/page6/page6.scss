@@ -18,15 +18,23 @@ page-page6 {
     margin: auto;
     border: 5px solid #fdab9f;
     opacity: 1;
-    transform: rotateY(90deg)
+    transform: rotateX(360deg)
 
   }
   .msg-container{
     background-color: rgba(26, 24, 24, 0.76);
     opacity: .8;
   }
-  h5{
+  h6{
     color: #ffffff;
     font-weight: bold;
+  }
+
+  .img-container{
+    margin-top: 32vh;
+  }
+  label{
+    color: azure;
+    font-weight: bold
   }
 }
