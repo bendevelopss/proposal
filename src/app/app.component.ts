@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { timer } from "rxjs/observable/timer";
 
-import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
+@NgModule({
+
+})
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = 'HomePage';
   showSplash: boolean = true
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
