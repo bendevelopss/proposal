@@ -22,9 +22,9 @@
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="FadeSplashScreen" value="true" />
     <preference name="ShowSplashScreen" value="true" />
-    <preference name="SplashScreenBackgroundColor" value="#FFFAFA" />
+    <preference name="SplashScreenBackgroundColor" value="#fdab9f" />
     <preference name="SplashScreenWidth" value="450" />
-    <preference name="SplashScreenSpinnerColor" value="#FF4B2B" />
+    <preference name="SplashScreenSpinnerColor" value="#fdab9f" />
     <preference name="Orientation" value="portrait" />
     <platform name="android">
         <allow-intent href="market:*" />
