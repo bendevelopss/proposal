@@ -29,7 +29,7 @@ export class HomePage {
     '/assets/images/30.jpg',
     '/assets/images/32.jpg',
     '/assets/images/33.jpeg',
-    '/assets/images/62.jpg',
+    '/assets/images/62.jpeg',
     '/assets/images/39.jpg',
     '/assets/images/41.jpg',
     '/assets/images/44.jpeg',
